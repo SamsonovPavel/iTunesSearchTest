@@ -100,6 +100,7 @@
             break;
             
         case 2:
+            vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"AboutViewController"];
             break;
             
         default:

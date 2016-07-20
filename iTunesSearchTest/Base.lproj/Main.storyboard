@@ -1,41 +1,285 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="K3a-KF-dGq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="hrX-Fe-0SR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="aRh-fB-CZy">
+        <!--Media Search Table View Controller-->
+        <scene sceneID="a7o-aH-7kI">
             <objects>
-                <tableViewController storyboardIdentifier="MediaSearchTableViewController" id="0O1-c6-HGS" customClass="MediaSearchTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H2G-Kf-SyQ">
+                <viewController storyboardIdentifier="MediaSearchTableViewController" id="pgM-mT-mhP" customClass="MediaSearchTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUP-Kf-FPN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter the text" id="EIJ-h4-woE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <animations/>
+                                <color key="barTintColor" red="0.00093687709886580706" green="0.76752644777297974" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" keyboardType="webSearch"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="pgM-mT-mhP" id="zLS-9o-9hK"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="7CN-7q-EG6">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaCell" rowHeight="65" id="iXg-IY-ICu" customClass="MediaTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXg-IY-ICu" id="Zed-0g-PZX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TDx-mv-EFf">
+                                                    <rect key="frame" x="5" y="5" width="55" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ht9-5b-yxz">
+                                                    <rect key="frame" x="68" y="11" width="250" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h20-YH-e5L">
+                                                    <rect key="frame" x="68" y="21" width="250" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectionPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ze5-N6-sDZ">
+                                                    <rect key="frame" x="68" y="33" width="100" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                                    <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ykn-57-cOO">
+                                                    <rect key="frame" x="68" y="43" width="80" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="primaryGenreName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bcj-Q2-Ij0">
+                                                    <rect key="frame" x="140" y="43" width="50" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dJu-dP-JFh">
+                                                    <rect key="frame" x="195" y="33" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                                    <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vqp-aH-ymP">
+                                                    <rect key="frame" x="195" y="43" width="60" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tLc-M7-Kzq">
+                                                    <rect key="frame" x="263" y="42" width="46" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <state key="normal" title="Save">
+                                                        <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="saveButtonAction:" destination="pgM-mT-mhP" eventType="touchUpInside" id="h49-VX-7QK"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDs-jC-zMh">
+                                                    <rect key="frame" x="68" y="0.0" width="250" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="artistNameLabel" destination="tDs-jC-zMh" id="qHc-Zx-mCC"/>
+                                            <outlet property="artworkUrl100" destination="TDx-mv-EFf" id="NVD-V1-hPi"/>
+                                            <outlet property="collectionNameLabel" destination="ht9-5b-yxz" id="uR8-AL-tF1"/>
+                                            <outlet property="collectionPriceLabel" destination="ze5-N6-sDZ" id="MUg-pL-yxZ"/>
+                                            <outlet property="primaryGenreNameLabel" destination="bcj-Q2-Ij0" id="A6i-WE-nPB"/>
+                                            <outlet property="releaseDateLabel" destination="ykn-57-cOO" id="nyz-jy-gE1"/>
+                                            <outlet property="trackCountLabel" destination="Vqp-aH-ymP" id="1AZ-CU-ToE"/>
+                                            <outlet property="trackNameLabel" destination="h20-YH-e5L" id="RiY-Ax-dPC"/>
+                                            <outlet property="trackPriceLabel" destination="dJu-dP-JFh" id="6iN-gc-OeY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pgM-mT-mhP" id="OBf-WL-c7R"/>
+                                    <outlet property="delegate" destination="pgM-mT-mhP" id="kej-tZ-NbJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZI-uQ-nYf"/>
+                    <connections>
+                        <outlet property="searchBar" destination="EIJ-h4-woE" id="C7n-l6-GIn"/>
+                        <outlet property="tableView" destination="7CN-7q-EG6" id="jgy-be-IU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRl-cS-DNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="-115"/>
+        </scene>
+        <!--Save Media View Controller-->
+        <scene sceneID="iB4-oP-Ytv">
+            <objects>
+                <tableViewController storyboardIdentifier="SaveMediaViewController" id="c8y-8H-TXP" customClass="SaveMediaViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LQw-Vo-V7Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaCell" id="4U1-Ps-qwY">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveMediaCell" rowHeight="65" id="Kbc-TP-S8I" customClass="SaveMediaTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4U1-Ps-qwY" id="kYc-zd-Zhb">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kbc-TP-S8I" id="tKI-Hd-kFa">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="izo-ar-aUg">
+                                            <rect key="frame" x="5" y="5" width="55" height="55"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DRA-z8-J6t">
+                                            <rect key="frame" x="68" y="11" width="250" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ob5-Bi-elN">
+                                            <rect key="frame" x="68" y="21" width="250" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectionPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="loE-dZ-OkB">
+                                            <rect key="frame" x="68" y="33" width="100" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Uy-KX-31q">
+                                            <rect key="frame" x="68" y="43" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="primaryGenreName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Acl-uC-1ot">
+                                            <rect key="frame" x="140" y="43" width="50" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZ1-kS-0hX">
+                                            <rect key="frame" x="195" y="33" width="120" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7CK-Om-hyX">
+                                            <rect key="frame" x="195" y="43" width="60" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S8E-RP-crs">
+                                            <rect key="frame" x="263" y="42" width="46" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <state key="normal" title="Delete">
+                                                <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteButtonAction:" destination="c8y-8H-TXP" eventType="touchUpInside" id="KrO-Jh-6LP"/>
+                                                <action selector="saveButtonAction:" destination="pgM-mT-mhP" eventType="touchUpInside" id="PJY-BR-Art"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mtv-No-bwg">
+                                            <rect key="frame" x="68" y="0.0" width="250" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="artistNameLabel" destination="Mtv-No-bwg" id="0vF-Pn-NMs"/>
+                                    <outlet property="artworkUrl100" destination="izo-ar-aUg" id="MpR-0H-2le"/>
+                                    <outlet property="collectionNameLabel" destination="DRA-z8-J6t" id="Zn3-15-rjZ"/>
+                                    <outlet property="collectionPriceLabel" destination="loE-dZ-OkB" id="eFe-k3-vCn"/>
+                                    <outlet property="primaryGenreNameLabel" destination="Acl-uC-1ot" id="wdl-98-bRv"/>
+                                    <outlet property="releaseDateLabel" destination="3Uy-KX-31q" id="pzX-41-UjH"/>
+                                    <outlet property="trackCountLabel" destination="7CK-Om-hyX" id="BbF-o7-hP4"/>
+                                    <outlet property="trackNameLabel" destination="ob5-Bi-elN" id="zUC-Oh-qlz"/>
+                                    <outlet property="trackPriceLabel" destination="aZ1-kS-0hX" id="8Tp-7B-tjv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="0O1-c6-HGS" id="Iev-nL-Ppg"/>
-                            <outlet property="delegate" destination="0O1-c6-HGS" id="W1T-Kw-vlM"/>
+                            <outlet property="dataSource" destination="c8y-8H-TXP" id="DxC-OX-Gnn"/>
+                            <outlet property="delegate" destination="c8y-8H-TXP" id="hJf-1v-Y4Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="58T-NP-1zg"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mad-x4-GEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCF-Pw-G4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="412"/>
+            <point key="canvasLocation" x="338" y="-115"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="jhZ-Yh-Jam">
@@ -78,31 +322,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybF-SB-iDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="1076"/>
-        </scene>
-        <!--Slide Navigation Controller-->
-        <scene sceneID="ali-XO-vDi">
-            <objects>
-                <navigationController id="K3a-KF-dGq" customClass="SlideNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1uY-9D-JA6" customClass="SlideNavigationBar">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="0O1-c6-HGS" kind="relationship" relationship="rootViewController" id="Gb6-ng-bZB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uup-3M-OMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="285" y="412"/>
+            <point key="canvasLocation" x="-70" y="580"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CpH-eX-QhF">
             <objects>
                 <navigationController storyboardIdentifier="LeftMenuNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ESG-Kx-gpi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uOp-O5-gpo" customClass="SlideNavigationBar">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uOp-O5-gpo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -114,7 +341,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZa-ax-4LM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="285" y="1076"/>
+            <point key="canvasLocation" x="-483" y="580"/>
+        </scene>
+        <!--Slide Navigation Controller-->
+        <scene sceneID="ebZ-jd-hu5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrX-Fe-0SR" customClass="SlideNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvA-EC-EB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pgM-mT-mhP" kind="relationship" relationship="rootViewController" id="u7P-D8-m5U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAr-Ua-1ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="-114.99999999999999"/>
         </scene>
     </scenes>
 </document>

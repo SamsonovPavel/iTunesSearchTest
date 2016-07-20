@@ -7,6 +7,7 @@
 //
 
 #import "LeftMenuViewController.h"
+#import "ServerRequestManager.h"
 
 @interface LeftMenuViewController ()
 
@@ -85,7 +86,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UIViewController *vc = nil;
     
     switch (indexPath.row)
@@ -95,6 +96,7 @@
             break;
             
         case 1:
+            vc = [mainStoryboard instantiateViewControllerWithIdentifier: @"SaveMediaViewController"];
             break;
             
         case 2:

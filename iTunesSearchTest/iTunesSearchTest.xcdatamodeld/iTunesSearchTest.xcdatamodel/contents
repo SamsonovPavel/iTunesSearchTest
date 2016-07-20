@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Media" representedClassName="Media" parentEntity="ParentClass" syncable="YES">
+        <attribute name="artistName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="Transformable" valueTransformerName="MediaImageValueTransformer" syncable="YES"/>
+        <attribute name="collectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collectionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="primaryGenreName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trackCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="trackName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trackPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="ParentClass" representedClassName="ParentClass" syncable="YES"/>
+    <elements>
+        <element name="Media" positionX="-126" positionY="-306" width="128" height="178"/>
+        <element name="ParentClass" positionX="-126" positionY="-414" width="128" height="43"/>
+    </elements>
 </model>

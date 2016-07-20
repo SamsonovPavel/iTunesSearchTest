@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerRequestManager.h"
 
-@interface MediaSearchTableViewController : UITableViewController
+@interface MediaSearchTableViewController : UIViewController <UISearchBarDelegate,
+                                                              UITableViewDelegate, UITableViewDataSource,
+                                                              ServerRequestManagerDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)saveButtonAction:(UIButton *)sender;
 
 @end

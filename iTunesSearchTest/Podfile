@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.1'
+project '/Users/admin/Documents/MyProjects/iTunesSearchTest/iTunesSearchTest.xcodeproj'
+target 'iTunesSearchTest' do
+pod 'AFNetworking', '~> 2.6.3'
+pod 'SDWebImage', '~>3.8'
+pod 'iOS-Slide-Menu', :git =>'https://github.com/aryaxt/iOS-Slide-Menu'
+end

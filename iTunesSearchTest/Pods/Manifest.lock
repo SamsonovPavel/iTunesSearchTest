@@ -1,0 +1,49 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - iOS-Slide-Menu (1.5)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.6.3)
+  - iOS-Slide-Menu (from `https://github.com/aryaxt/iOS-Slide-Menu`)
+  - SDWebImage (~> 3.8)
+
+EXTERNAL SOURCES:
+  iOS-Slide-Menu:
+    :git: https://github.com/aryaxt/iOS-Slide-Menu
+
+CHECKOUT OPTIONS:
+  iOS-Slide-Menu:
+    :commit: 2ddf700588c4774faab85c55b44128a0fcf34144
+    :git: https://github.com/aryaxt/iOS-Slide-Menu
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+
+PODFILE CHECKSUM: d1dd36548ef775ffe93524d9653c34d1409083fd
+
+COCOAPODS: 1.0.1

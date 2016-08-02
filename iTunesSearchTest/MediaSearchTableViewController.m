@@ -77,11 +77,13 @@
 {
     [self.requestManager postUsersServerWithString:searchString OnSuccess:^(NSArray *array) {
         
-        if ([self.requestArray count] > 0) {
-            [self.requestArray removeAllObjects];
-        }
-        
-        [self.requestArray addObjectsFromArray:array];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self.requestArray count] > 0) {
+                [self.requestArray removeAllObjects];
+            }
+            
+            [self.requestArray addObjectsFromArray:array];
+        });
         
     } onFailure:^(NSError *error, NSInteger statusCode) { // for further expansion
         
